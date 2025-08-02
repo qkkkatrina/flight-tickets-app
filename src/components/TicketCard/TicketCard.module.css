@@ -1,0 +1,90 @@
+/* src/components/TicketCard/TicketCard.module.css */
+
+.ticket-card {
+  background-color: rgba(232, 235, 242, 1); 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+  color: #333; 
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ticket-price {
+  font-size: 2em;
+  font-weight: bold;
+  color: rgba(78, 20, 140, 1); 
+}
+
+.company-logo {
+  max-width: 160px;
+  height: auto;
+  object-fit: contain; 
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.detail-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1; 
+    min-width: 100px; 
+    padding-right: 10px; 
+}
+
+.detail-column:last-child {
+    padding-right: 0; 
+}
+
+.detail-label {
+  font-size: 0.8em; 
+  color: rgba(133, 138, 227, 1); 
+  text-transform: uppercase; 
+  margin-bottom: 5px; 
+  white-space: nowrap; 
+}
+
+.detail-value {
+  font-size: 1.1em; 
+  font-weight: bold;
+  color: rgba(78, 20, 140, 1); 
+  white-space: nowrap; 
+}
+
+/* Медиа-запросы для адаптивности TicketCard */
+@media (max-width: 480px) {
+  .ticket-card {
+    padding: 15px;
+  }
+  .ticket-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .ticket-details {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  .detail-column {
+      padding-right: 0;
+  }
+}
